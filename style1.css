@@ -1,0 +1,199 @@
+/* Reset i ustawienia globalne */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Kontener główny - wyśrodkowany */
+.container {
+    max-width: 1100px;
+    width: 90%;
+    display: flex;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    background: white;
+    min-height: 600px;
+    max-height: 80vh;
+}
+
+/* Lewa kolumna - nawigacja (półprzezroczysta) */
+nav {
+    width: 260px;
+    background: rgba(100, 149, 237, 0.85); /* Niebieski z przezroczystością */
+    backdrop-filter: blur(10px);
+    padding: 0;
+    flex-shrink: 0;
+}
+
+/* Lista nawigacyjna */
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Główne linki nawigacyjne - ciemniejszy niebieski */
+nav ul li > a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    background: rgba(70, 130, 220, 0.9);
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+nav ul li > a:hover {
+    background: rgba(50, 110, 200, 0.9);
+}
+
+/* Podkategorie - jaśniejszy niebieski */
+nav ul li ul {
+    background: rgba(120, 170, 255, 0.8);
+}
+
+nav ul li ul li a {
+    display: block;
+    padding: 12px 20px 12px 35px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+    font-size: 14px;
+}
+
+nav ul li ul li a:hover {
+    background: rgba(100, 150, 235, 0.9);
+}
+
+/* Prawa kolumna - treść ze scrollem */
+.content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+    max-height: 80vh;
+    background: linear-gradient(to bottom, #e3f2fd 0%, #bbdefb 100%);
+}
+
+/* Tytuł */
+h1 {
+    color: #1565c0;
+    font-size: 48px;
+    margin-bottom: 25px;
+    font-weight: normal;
+}
+
+/* Podtytuły */
+h2 {
+    color: #000;
+    font-size: 20px;
+    margin: 25px 0 15px 0;
+    font-weight: bold;
+}
+
+/* Paragrafy */
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Obrazek */
+img {
+    display: block;
+    margin: 20px 0;
+    max-width: 200px;
+    height: auto;
+}
+
+/* Lista */
+ol {
+    margin: 15px 0 15px 25px;
+}
+
+ol li {
+    margin: 8px 0;
+}
+
+/* Tabela - szerokość jak cała kolumna */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+/* Nagłówki tabeli */
+table thead tr {
+    background: rgba(50, 120, 180, 0.9);
+    color: white;
+}
+
+table th {
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Komórki tabeli */
+table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* Co drugi wiersz - inny kolor */
+table tbody tr:nth-child(odd) {
+    background: rgba(187, 222, 251, 0.5);
+}
+
+table tbody tr:nth-child(even) {
+    background: rgba(227, 242, 253, 0.5);
+}
+
+/* Stopka - wyśrodkowana */
+footer {
+    background: #000080;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 8px 0;
+    text-align: center;
+}
+
+/* Scrollbar styling (opcjonalnie) */
+.content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
