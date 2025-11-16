@@ -7,8 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: url('background.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background: #e0e0e0;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -46,7 +45,7 @@ nav ul li {
 }
 
 /* Główne linki nawigacyjne - ciemniejszy niebieski */
-nav ul li > a {
+nav > ul > li > a {
     display: block;
     padding: 15px 20px;
     color: white;
@@ -56,13 +55,17 @@ nav ul li > a {
     transition: background 0.3s;
 }
 
-nav ul li > a:hover {
+nav > ul > li > a:hover {
     background: rgba(50, 110, 200, 0.9);
 }
 
 /* Podkategorie - jaśniejszy niebieski */
 nav ul li ul {
     background: rgba(120, 170, 255, 0.8);
+}
+
+nav ul li ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 nav ul li ul li a {
@@ -108,14 +111,17 @@ p {
     line-height: 1.6;
     margin-bottom: 15px;
     text-align: justify;
+    color: #000;
 }
 
-/* Obrazek */
-img {
+/* Obrazek - logo PJATK */
+.content img {
     display: block;
     margin: 20px 0;
     max-width: 200px;
     height: auto;
+    background: white;
+    padding: 10px;
 }
 
 /* Lista */
@@ -125,6 +131,7 @@ ol {
 
 ol li {
     margin: 8px 0;
+    color: #000;
 }
 
 /* Tabela - szerokość jak cała kolumna */
@@ -173,6 +180,10 @@ footer {
     left: 0;
     right: 0;
     width: 100%;
+}
+
+footer div {
+    display: inline-block;
 }
 
 footer p {
