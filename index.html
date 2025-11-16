@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moja strona</title>
-    <link rel="stylesheet" href="style1.css">
+    <title>Moja strona - PJATK</title>
+    <link rel="stylesheet" href="style1.css" id="stylesheet">
 </head>
 <body>
+    <!-- Przycisk do zmiany stylów -->
+    <button onclick="switchStyle()" style="position: fixed; top: 10px; right: 10px; z-index: 9999; padding: 10px 20px; background: #1976d2; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; box-shadow: 0 2px 5px rgba(0,0,0,0.3); font-weight: bold;">
+        Styl 1 (Ze scrollem) ↔️
+    </button>
+
     <div class="container">
         <nav>
             <ul>
@@ -28,7 +33,7 @@
             
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet aliquam purus, venenatis pharetra mi. Sed in urna odio. Suspendisse potenti. Curabitur interdum finibus iaculis. Suspendisse ultricies consectetur turpis id vehicula. Ut nulla eros, consectetur in diam ut, blandit efficitur est. Pellentesque vitae augue ac erat dignissim dignissim eget non enim.</p>
             
-            <img src="https://via.placeholder.com/200" alt="Placeholder">
+            <img src="logo.png" alt="Logo PJATK">
             
             <h2>subtitle</h2>
             
@@ -77,13 +82,55 @@
                     </tr>
                 </tbody>
             </table>
+            
+            <h2>subtitle</h2>
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet aliquam purus, venenatis pharetra mi. Sed in urna odio. Suspendisse potenti.</p>
+            
+            <h2>subtitle</h2>
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet aliquam purus, venenatis pharetra mi.</p>
         </div>
     </div>
     
     <footer>
-        <p>sample text 1</p>
-        <p>sample text 2</p>
-        <p>sample text 3</p>
+        <div>
+            <p>sample text 1</p>
+        </div>
+        <div>
+            <p>sample text 2</p>
+        </div>
+        <div>
+            <p>sample text 3</p>
+        </div>
     </footer>
+
+    <script>
+        let currentStyle = 1;
+        
+        function switchStyle() {
+            const stylesheet = document.getElementById('stylesheet');
+            const button = event.target;
+            
+            if (currentStyle === 1) {
+                stylesheet.href = 'style2.css';
+                currentStyle = 2;
+                button.textContent = 'Styl 2 (Rozwijane menu) ↔️';
+            } else {
+                stylesheet.href = 'style1.css';
+                currentStyle = 1;
+                button.textContent = 'Styl 1 (Ze scrollem) ↔️';
+            }
+        }
+    </script>
 </body>
 </html>
+```
+
+**Struktura plików w repozytorium:**
+```
+twoje-repo/
+├── index.html
+├── style1.css
+├── style2.css
+└── logo.png      ← Twoje logo PJATK
